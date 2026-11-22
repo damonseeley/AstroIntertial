@@ -1,0 +1,47 @@
+You are an expert aerospace historian, web designer, and technical communicator.
+Build a comprehensive, museum-grade, production-quality single-page website in `index.html` explaining:
+"Celestial Navigation & Stellar-Inertial Guidance in the Pre-GPS Era"
+(from early ICBMs/SLBMs to the SR-71 Blackbird, Snark, and the broader pre-GPS radio/satellite landscape).
+
+### Technical & Historical Content Requirements
+Include all of the following topics in meticulous technical depth:
+1. The Physics of Inertial Drift & Celestial Truth
+   - How a 3-axis gyrostabilized platform works (Draper floated integrating gyros, orthogonal accelerometers).
+   - Double integration error growth (s = 1/2 * a * t^2). Why 0.01 deg/hr drift yields miles of miss distance.
+   - Why celestial coordinates provide an unjammable, passive, absolute optical truth vector to recalibrate gyro drift and platform tilt.
+
+2. Ballistic & Cruise Missiles
+   - SLBMs (Polaris, Poseidon, Trident Mk 5 / Mk 6 Stellar-Inertial Guidance by MIT Draper Lab / Kearfott): SINS drift from submarines, fairing ejection in vacuum, post-boost vehicle ("bus") optical star sighting (Polaris, Vega), velocity trim before MIRV release, reducing CEP from miles to ~300 ft.
+   - Land-Based ICBMs: Why silo-based Minuteman I/II/III used pure inertial (optically pre-aligned via autocollimators peering into silos; 30-min flight time made pure INS sufficient; MX Peacekeeper AIRS beryllium sphere floating in fluorocarbon) vs Soviet mobile ICBMs (RT-2PM Topol / SS-25) requiring in-flight astro-correction (астрокоррекция) due to unpaved mobile launch coordinates.
+   - Northrop SM-62 Snark (1950s): First operational weapon with automated astro-inertial guidance; Nortronics dual-star tracking telescope under a quartz dome for 10-11 hour subsonic intercontinental flight.
+
+3. The SR-71 Blackbird — Nortronics NAS-14V2 ANS ("R2-D2")
+   - Mach 3.2 at 85,000 ft; passive autonomous navigation over denied airspace.
+   - Daytime star tracking mechanics: Cassegrain telescope, blue-light optical filters, photomultiplier tubes, rotating chopper reticle isolating coherent point-source starlight from diffuse indigo daylight sky.
+   - Digital catalog of 56 (later 61) navigational stars, dual-star sightings every 30-60s, continuous gyro drift and heading recalibration.
+   - 300-foot (90 m) accuracy over multi-hour supersonic flights.
+
+4. The Broader Pre-GPS Landscape (Comparative Analysis & Technical Matrix)
+   - Periscopic sextants on B-52s & early commercial airliners.
+   - LORAN-C (100 kHz pulsed ground waves, Time Difference of Arrival hyperbolic geometry).
+   - OMEGA (10-14 kHz VLF, 8 global stations, submarine penetration).
+   - Transit / NAVSAT (APL Doppler satellite system for Polaris SINS updates).
+   - Doppler Radar Navigation (frequency shift over terrain for groundspeed and drift angle).
+   - TERCOM (Terrain Contour Matching for low-flying cruise missiles).
+
+### Visual & Interactive Design Requirements
+- Aesthetic: High-end aerospace technical archive / Smithsonian / MIT Draper Lab aesthetic. Dark mode (deep space obsidian `#0a0c10`, navy slate, celestial amber/gold accents `#f5a623`, star blue `#4a90e2`, crisp technical typography).
+- Responsive layout with clear navigation (Hero, Physics & Math, Missiles & Space, SR-71 Blackbird, Landscape Matrix, Interactive Drift Simulator, Archival Gallery, Sources).
+- Technical Diagrams: Include detailed inline SVG diagrams:
+  1. Inertial Drift vs. Celestial Reset (showing error compounding exponentially vs periodic star fixes resetting error).
+  2. Trident SLBM Flight & Celestial Sighting Sequence (Boost -> Staging -> Vacuum -> Fairing Separation -> Star Sighting -> Velocity Trim -> MIRV release).
+  3. SR-71 Nortronics NAS-14V2 Optical Path (Quartz window -> Cassegrain mirror -> Chopper wheel -> Blue filter -> Photomultiplier tube -> Digital computer).
+  4. Hyperbolic Navigation (LORAN/OMEGA TDOA geometry).
+- Real Archival Imagery:
+  Embed real, high-resolution public domain images from Wikimedia Commons / NASA / US National Archives / US Air Force / US Navy (e.g. SR-71 in flight, SR-71 ANS sensor window behind cockpit, Trident I/II missile launch and bus, Northrop Snark, Charles Stark Draper with gyro platform). Verify image URLs exist and add descriptive captions and fallbacks.
+- Interactive Simulator / Widget:
+  An interactive JavaScript simulator allowing users to adjust flight duration (hours) and gyro drift rate (deg/hr), showing the resulting miss distance for Pure INS vs. Periodic Star Fixes (Astro-Inertial), with visual telemetry readouts.
+- Star Catalog Explorer:
+  An interactive widget showcasing key celestial navigation stars (Polaris, Vega, Sirius, Arcturus, Canopus) with their coordinates, magnitude, and spectral class.
+
+Produce the entire application in `index.html` with clean, self-contained CSS and JS. Make it stunning, deep, and complete.
